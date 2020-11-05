@@ -1,0 +1,9 @@
+cmake .. -DDLIB_USE_CUDA=1 -DUSE_AVX_INSTRUCTIONS=1 -G "Visual Studio 16 2019" -A x64 -DCMAKE_PREFIX_PATH=C:\opencvcuda\cudnn-10.1-windows10-x64-v7.6.4.38\cuda
+
+cmake --build . 
+
+python setup.py install --set USE_AVX_INSTRUCTIONS=yes --set DLIB_USE_CUDA=yes --set CMAKE_PREFIX_PATH=C:\opencvcuda\cudnn-10.1-windows10-x64-v7.6.4.38\cuda 
+
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python" setup.py install --set USE_AVX_INSTRUCTIONS=yes --set DLIB_USE_CUDA=yes --set CMAKE_PREFIX_PATH=C:\opencvcuda\cudnn-10.1-windows10-x64-v7.6.4.38\cuda 
+
+$ pip install face_recognition
